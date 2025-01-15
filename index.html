@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--Fontawesome link iconos-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--Tu enlace Bootstrap siempre debe estar antes del enlace CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <title>Instagram Feed con Bootstrap</title>
+</head>
+<body>
+  <!--El navbar o barra de navegación-->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+  <div class="d-flex gap-1"><i class="fa-brands fa-instagram lead"></i><h6>Instagram</h6></div>
+
+  <!--Cuerpo de boton modal verde-->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="staticBackdropLabel">Crea una publicación</h4>
+        </div>
+        <div class="modal-body"> <!--form de modal boton verde-->
+          <h6>Título:</h6>
+          <textarea class="form-control p-2" placeholder="Agrega el título de tu publicación aquí"
+            id="floatingTextarea"></textarea>
+          <div class="row p-2">
+            <!--icono de la camara y ubicación modal-->
+            <button class="col-1 p-1 m-1 border rounded-1"><i class="fa-solid fa-camera"></i></button>
+            <button class="col-1 p-1 m-1 border rounded-1"><i class="fa-solid fa-location-dot"></i></button>
+          </div> <!--cierre div fila iconos-->
+        </div> <!--cierre div modal body-->
+        <div class="modal-footer"> <!--Pie de pag modal-->
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">Publicar</button>
+        </div>
+      </div> <!--ciere modal content-->
+    </div> <!--ciere modal dialogo-->
+  </div> <!--ciere modal fade-->
+  
+        <!--ddropdown secondary o boton desplegable gris-->
+        <div class="btn-group">
+          <div class="d-flex m-1"><button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Crear una nueva publicación</button></div><!--modal botón verde-->
+          <div class="d-flex m-1"><button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-gear"></i></button>
+          
+        <nav class="dropdown-menu dropdown-menu-end">
+          <a class="dropdown-item" aria-current="page" href="">Perfil</a>
+          <a class="dropdown-item" href="">Accesibilidad</a>
+          <a class="dropdown-item" href="">Privacidad y datos</a>
+          <hr class="dropdown-divider">
+          <a class="dropdown-item text-danger" href="">Finalizar sesion</a>
+        </nav>
+
+          <!--TAMBIEN SE PUEDE REALIZAR CON ul y li:
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="https://www.instagram.com/">Perfil<i class="fa-regular fa-face-smile p-2"></i></a></li>
+            <li><a class="dropdown-item" href="#">Accesibilidad</a></li>
+            <li><a class="dropdown-item" href="#">Privacidad y datos</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item text-danger" href="#">Finalizar sesion</a></li>
+          </ul>-->
+
+        </div>
+      </div> <!--cierre dropdown secondary-->      
+  </div> <!--cierre del container del navbar-->
+</nav>
+
+<!--iconos azules para el grid-->
+<ul class="nav nav-tabs justify-content-center">
+  <li class="nav-item"><a class="nav-link" href=""><i class="fa-solid fa-table-cells"></i></li></a>
+  <li class="nav-item"><a class="nav-link" href="index2.html"><i class="fa-solid fa-square"></i></li></a>
+</ul>
+
+<!--layout grid o diseño de cuadricula - Seccion de fotos Instagram en 3 Columnas-->
+<div class="container-fluid text-center">
+  <div class="row"> <!--primera fila de fotos con 3 columnas-->
+  <div class="col-sm p-1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRr4MK8bJQjlsru-sqyVum7WsXGFPOO1LVSQ&s" class="img-fluid w-100 h-100" alt=""></div>
+  <div class="col-sm p-1"><img src="https://resources.reed.co.uk/courses/coursemedia/342090/c3fa961c-1272-48a7-a21a-0d1bd7def86c_cover.webp" class="img-fluid w-100 h-100" alt=""></div>
+  <div class="col-sm p-1"><img src="https://miro.medium.com/v2/resize:fit:1200/1*CP2ZCigiQfMeMsZWLhgZGw.png" class="img-fluid w-100 h-100" alt=""></div>
+  </div> <!--cierre de primera fila de fotos-->
+
+  <div class="row"> <!--segunda fila de fotos con 3 columnas-->
+    <div class="col-sm p-1"><img src="https://cdn.sanity.io/images/9uwkxuld/production/255cfec31bbbe3b01f9dfffe7a02299fab7cef8f-800x300.png?h=1000&auto=format&fit=crop" class="img-fluid w-100 h-100" alt=""></div>
+    <div class="col-sm p-1"><img src="https://www.lisdatasolutions.com/wp-content/uploads/2022/04/Que-es-y-para-que-sirve-GitHub.jpg" class="img-fluid w-100 h-100" alt=""></div>
+    <div class="col-sm p-1"><img src="https://www.deustoformacion.com/sites/deustoformacion/files/lenguaje-html5.jpg" class="img-fluid w-100 h-100" alt=""></div>
+  </div> <!--cierre de segunda fila de fotos-->
+
+  <div class="row"> <!--tercera fila de fotos-->
+  <div class="col-sm p-1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjAdWmsWA9f5DhF9aLbilCZLH3BkeHjeaZGA&s" class="img-fluid w-100 h-100" alt=""></div>
+  <div class="col-sm p-1"><img src="https://www.ceupe.com/images/easyblog_articles/3583/b2ap3_large_profesion-de-programador-web.jpg" class="img-fluid w-100 h-100" alt=""></div>
+  <div class="col-sm p-1"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6tS7RHhFNqyGybRm-Rzdzepda7WTD7gDwQQ&s" class="img-fluid w-100 h-100" alt=""></div>
+  </div> <!--cierre de tercera fila de fotos-->
+</div> <!--cierre de container layout grid-->
+
+
+
+
+    <!--Los scripts o archivos Bootstrap JS siempre deben estar antes de la etiqueta de cierre - NO QUITAR ARCHIVOS-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+</body>
+</html>
